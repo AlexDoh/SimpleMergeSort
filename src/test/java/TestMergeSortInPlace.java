@@ -1,9 +1,9 @@
-import com.odmytrenko.mergesort.MergeSort;
+import com.odmytrenko.mergesort.MergeSortInPlace;
 import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
 
-public class TestMergeSort {
+public class TestMergeSortInPlace {
 
     @Test
     public void shouldReturnSortedArray() {
@@ -11,7 +11,7 @@ public class TestMergeSort {
         int[] expectedArray = {9, 0, 10, 15, 20, -10, 440, 7, 1000, 1, 3, 4, 7, 5, 8, 6, 7, 8};
 
         Arrays.sort(expectedArray);
-        MergeSort.sort(testArray);
+        MergeSortInPlace.sort(testArray);
 
         Assert.assertArrayEquals(expectedArray, testArray);
     }
@@ -21,7 +21,7 @@ public class TestMergeSort {
         int[] testArray = {};
         int[] expectedArray = {};
 
-        MergeSort.sort(testArray);
+        MergeSortInPlace.sort(testArray);
 
         Assert.assertArrayEquals(expectedArray, testArray);
     }
